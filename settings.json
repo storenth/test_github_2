@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "qcoreevent.h": "c",
+        "qset.h": "c",
+        "stdio.h": "c"
+    }
+}

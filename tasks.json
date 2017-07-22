@@ -1,0 +1,44 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "Run c_pro",
+            "type": "shell",
+            "command": "./${fileBasenameNoExtension}.out",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "taskName": "Compile c_pro",
+            "type": "process",
+            "command": "gcc",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileBasenameNoExtension}.out"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [
+                "$go"
+            ]
+        }
+    ]
+}   
+//Old worked version
+    // "version": "0.1.0",
+    // "command": "gcc",
+    // "isShellCommand": true,
+    // "args": ["${file}", "-o", "${fileBasenameNoExtension}.out"],
+    // "showOutput": "always"
